@@ -1,0 +1,58 @@
+<div ng-controller="ProfileController as model" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-2 main">
+            <h1>Profile</h1>
+
+            <!-- {{currentUser}} -->
+
+            <div ng-show="message" class="alert alert-success" role="alert">{{message}}</div>
+
+            <div ng-show="error" class="alert alert-danger" role="alert">{{error}}</div>
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Username:</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input ng-model="currentUser.username" type="text" class="form-control" id="" placeholder="Username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Password:</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input ng-model="currentUser.password" type="password" class="form-control" id="" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">First Name:</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input ng-model="currentUser.firstName" type="text" class="form-control" id="" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Last Name:</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input ng-model="currentUser.lastName" type="text" class="form-control" id="" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Email:</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input ng-model="currentUser.emails" type="email" class="form-control" id="" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Role:</label>
+                    <div class="col-sm-10 col-md-10">
+                        <input ng-model="currentUser.roles" type="text" class="form-control" id="" placeholder="Role">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10 col-md-10">
+                        <button ng-click="model.update(currentUser)" type="submit" class="btn btn-default btn-md">Update</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

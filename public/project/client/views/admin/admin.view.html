@@ -1,0 +1,96 @@
+<div ng-controller="AdminController" class="container-fluid admin">
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1>Administration Panel</h1>
+
+            <h3>Users</h3>
+            <br>
+            <!-- <span>Ordered By: {{orderByField}}, Reverse Sort: {{reverseSort}}</span> -->
+            <table class="table table-hover table-striped table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            <a ng-click="orderByField='username'; reverseSort = !reverseSort">Username
+                                <span ng-show="orderByField == 'username'">
+                                    <span ng-show="!reverseSort" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+                                    <span ng-show="reverseSort" class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                                </span>
+                            </a>
+                        </th>
+                        <th>Password</th>
+                        <th>
+                            <a ng-click="orderByField='firstName'; reverseSort = !reverseSort">First Name
+                                <span ng-show="orderByField == 'firstName'">
+                                    <span ng-show="!reverseSort" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+                                    <span ng-show="reverseSort" class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                                </span>
+                            </a>
+                        </th>
+                        <th>
+                            <a ng-click="orderByField='lastName'; reverseSort = !reverseSort">Last Name
+                                <span ng-show="orderByField == 'lastName'">
+                                    <span ng-show="!reverseSort" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+                                    <span ng-show="reverseSort" class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                                </span>
+                            </a>
+                        </th>
+                        <th>Email</th>
+                        <th>NU ID</th>
+                        <th>Role(s)</th>
+                        <!-- <th>Likes</th> -->
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- <td>&nbsp;</td> -->
+                        <td>
+                            <input ng-model="user.username" class="form-control" id="input-username" placeholder="Username" />
+                        </td>
+                        <td>
+                            <input ng-model="user.password" class="form-control" id="input-password" type="password" placeholder="Password" />
+                        </td>
+                        <td>
+                            <input ng-model="user.firstName" class="form-control" id="input-first" placeholder="First Name" />
+                        </td>
+                        <td>
+                            <input ng-model="user.lastName" class="form-control" id="input-last" placeholder="Last Name" />
+                        </td>
+                        <td>
+                            <input ng-model="user.email" class="form-control" id="input-email" type="email" placeholder="Email" />
+                        </td>
+                        <td>
+                            <input ng-model="user.nuid" class="form-control" id="input-nuid" type="number" placeholder="000000000" />
+                        </td>
+                        <td>
+                            <input ng-model="user.roles" class="form-control" id="input-roles" placeholder="Role" />
+                        </td>
+                        <!-- <td>
+                            <input ng-model="user.likes" class="form-control" id="input-roles" placeholder="" />
+                        </td> -->
+                        <td>
+                            <a ng-click="add(user)"><i class="fa fa-user-plus"></i></a>
+                            <a ng-click="update(user)"><i class="fa fa-check-square-o"></i></a>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="user in users|orderBy:orderByField:reverseSort">
+                        <!-- <td>{{user._id}}</td> -->
+                        <td>{{user.username}}</td>
+                        <td>{{user.password}}</td>
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.nuid}}</td>
+                        <td>{{user.roles}}</td>
+                        <!-- <td>{{user.likes}}</td> -->
+                        <td>
+                            <a ng-click="remove(user)"><i class="fa fa-user-times"></i></a>
+                            <a ng-click="select(user)"><i class="fa fa-pencil-square-o"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div ng-include="'views/header/help-modal.html'"></div>
+</div>

@@ -1,0 +1,682 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300italic,300,400italic,600,600italic);
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.table-nowrap {
+    white-space: nowrap !important;
+}
+td, th {
+    white-space: nowrap;
+}
+a {
+    color: #222;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+a:hover {
+    color: #CC0000;
+}
+p {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+input {
+    width: 100%;
+}
+h1 {
+    margin: 0px 0 20px;
+}
+.btn, .panel, .panel-heading, .panel-body, .list-group-item, .modal-content, .alert {
+    border-radius: 0 !important;
+}
+
+.clicked {
+    color: #CC0000;
+}
+
+
+/******************* HEADER ********************/
+
+.header-container {
+    padding-right: 0;
+}
+.nav-tabs>li>a, .navbar-toggle {
+    border: none;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: transparent;
+}
+.navbar-toggle .icon-bar {
+    width: 30px;
+}
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 5px;
+}
+.main {
+    padding: 40px 30px;
+}
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+@media screen and (max-width: 330px) {
+    .navbar-toggle {
+        margin-right: 30px;
+    }
+}
+@media screen and (min-width: 500px) {
+    .navbar-toggle {
+        margin-right: 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding-right: 0;
+    }
+}
+.navbar-default {
+    background: #e7e7e7;
+    height: 60px;
+}
+.navbar-default .navbar-nav>li>a {
+    padding: 19px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+@media screen and (max-width: 360px) {
+    .navbar-default .navbar-nav>li>a {
+        padding: 19px 10px;
+    }
+}
+.navbar-toggle {
+    margin-top: -47px;
+}
+.navbar-default .navbar-brand {
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    background: #CC0000;
+    width: 212px;
+    height: 60px;
+    font-family: 'Libre Baskerville', serif;
+    padding-top: 20px;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #fff;
+    background: #CC0000;
+}
+.navbar-default .navbar-brand img#northeastern-logo {
+    width: 150px;
+    margin-top: -7px;
+    margin-left: 15px;
+    display: block;
+}
+.navbar-default .navbar-brand img#northeastern-seal {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .navbar-default .navbar-brand {
+        width: 70px;
+        padding: 5px 10px;
+    }
+    .navbar-default .navbar-brand img#northeastern-logo {
+        display: none;
+    }
+    .navbar-default .navbar-brand img#northeastern-seal {
+        display: block;
+        width: 48px;
+    }
+}
+.navbar-header {
+    width: 100%;
+}
+.navbar-right {
+    height: 60px;
+    margin: 0;
+}
+.navbar-right > li {
+    letter-spacing: 0.5px;
+    border-left: 1px solid #bbb;
+    height: 60px;
+    white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+    .navbar-header {
+        width: 105%;
+    }
+    .navbar-right {
+        margin: 0;
+    }
+    .navbar-right >li {
+        display: inline-block;
+        vertical-align: top;
+        border-left: none;
+        border-right: 1px solid #bbb;
+    }
+}
+.navbar-default .navbar-right>li>a:focus, .navbar-default .navbar-right>li>a:hover, .navbar-default .navbar-right>.active>a, .navbar-default .navbar-right>.active>a:focus, .navbar-default .navbar-right>.active>a:hover {
+    background: #ccc;
+    color: #555;
+}
+.navbar-default .mobile-nav>li>a:focus, .navbar-default .mobile-nav>li>a:hover, .navbar-default .mobile-nav>.active>a, .navbar-default .mobile-nav>.active>a:focus, .navbar-default .mobile-nav>.active>a:hover {
+    background: #615445;
+    color: #fff;
+}
+.navbar-right li a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.navbar-right .fa {
+    font-size: 20px;
+    padding-left: 10px;
+}
+.navbar-right > .active > a, .navbar-right > .active > a:hover, .navbar-right > .active > a:focus {
+    color: #777;
+    background-color: #aaa;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover .navbar-nav > li > a {
+    color: #333;
+    background-color: #ccc;
+}
+i.fa.fa-question-circle, i.fa.fa-cog {
+    font-size: 24px;
+    padding: 0 5px;
+}
+.right-menu {
+    margin: 0 !important;
+}
+.navbar-collapse .navbar-nav>li>a {
+    color: #bbb;
+}
+/******************* SIDEBAR *********************/
+
+.nav-sidebar > li > a {
+    padding: 15px 20px;
+    border-left: 5px solid #3f3b36;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.nav-sidebar > li > a:hover, .nav-sidebar > li > a:focus{
+    background: #615445;
+    border-left: 5px solid #8e2a2a;
+    color: #fff;
+}
+.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #615445;
+    border-left: 5px solid #CC0000;
+}
+.sidebar {
+    top: 39px;
+    background: #3f3b36;
+    width: 213px;
+}
+.sidebar a {
+    color: #aaa;
+}
+.sidebar .fa {
+    margin-right: 10px;
+    width: 20px;
+}
+.sidebar li.user, .sidebar li.user > a {
+    color: #fff;
+    background: #615445;
+    border: none;
+    /*border-bottom: 2px solid #3f3b36;*/
+    height: 70px;
+}
+.sidebar li.user > a > img {
+    width: auto;
+    height: 45px;
+    margin-right: 15px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+.sidebar li.sidebar-label {
+    height: 60px;
+    color: #aaa;
+}
+.sidebar li.sidebar-label span {
+    position: absolute;
+    bottom: 3px;
+    padding: 0 10px;
+}
+
+/****************** MOBILE NAV ********************/
+
+.mobile-nav {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .mobile-nav {
+        background: #3f3b36 !important;
+        margin-top: 0;
+        display: block;
+    }
+    .mobile-nav a {
+        color: #aaa;
+    }
+    .mobile-nav .fa {
+        margin-right: 10px;
+        width: 20px;
+    }
+    .mobile-nav > li > a:hover, .mobile-nav > li > a:focus {
+        background: #615445;
+        border-left: 5px solid #8e2a2a;
+        color: #fff !important;
+    }
+    .mobile-nav > .active > a, .mobile-nav > .active > a:hover, .mobile-nav > .active > a:focus {
+        color: #fff !important;
+        background-color: #615445 !important;
+        border-left: 5px solid #CC0000;
+    }
+}
+
+/******************** TEXT INPUTS ********************/
+
+.nav-tabs>li>a {
+    color: #555;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #CC0000;
+}
+.admin .main .form-group {
+    margin: 0;
+}
+.admin .main .form-control {
+    border-radius: 0;
+}
+.form-horizontal {
+    margin-left: 3px;
+}
+.form-horizontal .control-label {
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-control {
+    border-radius: 0;
+    height: 37px;
+}
+select.form-control {
+    border: 0;
+    outline: 1px solid #CCC;
+    background-color: white;
+}
+.glyphicon, .fa {
+    font-size: 18px;
+    top: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+    .glyphicon, .fa {
+        margin: 0 3px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .glyphicon, .fa {
+        font-size: 16px;
+    }
+}
+.courses th {
+    white-space: nowrap;
+}
+.glyphicon-triangle-bottom, .glyphicon-triangle-top {
+    top: -2px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.form-fields {
+    margin-top: 30px;
+}
+.form-fields .fields-group {
+    display: block;
+}
+.form-fields .form-group {
+    display: inline-block;
+    width: 65%;
+    margin-right: 10px;
+}
+@media screen and (max-width: 480px) {
+    .form-fields .form-group {
+        margin-right: 3px;
+    }
+}
+.action-links {
+    display: inline-block;
+}
+.action-links .glyphicon {
+    margin: 0 5px 0 10px;
+}
+@media screen and (max-width: 600px) {
+    .action-links .glyphicon {
+        margin: 0 5px 0 5px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .action-links .glyphicon {
+        margin: 0 2px 0 2px;
+    }
+}
+.marginTop20 {
+    margin-top: 20px;
+}
+.main .fa-star {
+    color: #CC0000;
+}
+
+/***************** SEARCH BOX ******************/
+
+.search {
+    padding: 15px 0;
+    width: 35%;
+    display: inline-block;
+}
+.search .input-group .form-control {
+    height: 34px;
+}
+.search .btn {
+    background: none;
+    border: none;
+    left: -34px;
+}
+
+/****************** PANELS ******************/
+
+.panel-heading {
+    font-size: 18px;
+    font-weight: 600;
+}
+.text-muted {
+    font-weight: 300;
+}
+
+/****************** LOGIN PAGE ****************/
+.login .login-row {
+    margin-top: 40px;
+}
+.login .register-link {
+    color: #555;
+    /*margin-top: 40px;*/
+    margin-left: 30px;
+    font-size: 16px;
+    display: inline-block;
+}
+.login .register-link a {
+    text-decoration: underline;
+    display: inline-block;
+    color: #CC0000;
+    font-weight: 700;
+}
+@media screen and (max-width: 410px) {
+    .login .register-link {
+        display: block;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+}
+.login .login-google {
+    background: #dc4e41;
+    color: #eee;
+    margin-top: 10px;
+}
+.login .login-fb {
+    background: #3b5998;
+    color: #eee;
+    margin-top: 10px;
+}
+.login .login-google:hover, .login-fb:hover {
+    color: #fff;
+}
+.login .login-google:focus, .login-fb:focus {
+    color: #ccc;
+}
+.login .login-google .fa, .login-fb .fa {
+    font-size: 20px;
+    vertical-align: bottom;
+}
+
+/****************** PROFILE PAGE ****************/
+
+#deleteUser {
+    text-align: center;
+}
+#deleteUser .modal-header, #deleteUser .modal-footer {
+    border: none;
+}
+#deleteUser .modal-footer {
+    padding: 10px;
+}
+#deleteUser .btn {
+    margin: 0 20px;
+}
+@media screen and (min-width: 768px) {
+    #deleteUser .modal-dialog {
+        width: 550px;
+        margin: 150px auto;
+    }
+}
+
+/****************** DASHBOARD ****************/
+
+.main h1, .main h2 {
+    display: inline-block;
+}
+p.dashboard-welcome {
+    margin-top: 5px;
+}
+.dashboard .schedule-panel, .dashboard .dates-panel {
+    /*height: 300px;*/
+}
+.dashboard .exam-panel, .dashboard .grades-panel, .dashboard .advisors-panel {
+    /*height: 300px;*/
+}
+.dashboard .panel .fa {
+    margin-right: 10px;
+    color: #333;
+}
+
+/****************** COURSES PAGE ****************/
+
+.courses a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.courses .fa {
+    font-size: 18px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.courses .addCourseButton {
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.courses .addCourseButton .fa {
+    font-size: 16px;
+    margin-right: 7px;
+    margin-left: 0;
+}
+@media screen and (max-width: 440px) {
+    .courses .addCourseButton {
+        margin-left: 20px;
+    }
+    .courses .addCourseButton .new-course {
+        display: none;
+    }
+}
+.courses table td.subject, .courses table td.number, .courses table td.title {
+    table-layout: fixed;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.courses table td.subject {
+    width: 100px;
+}
+.courses table td.number {
+    width: 100px;
+}
+.courses table td.title {
+    width: 600px;
+}
+
+/****************** FAVORITED, COMPLETED, IN PROGRESS PAGE ****************/
+
+
+.favorited table td.subject, .favorited table td.number, .favorited table td.title,
+.completed table td.subject, .completed table td.number, .completed table td.title,
+.inProgress table td.subject, .inProgress table td.number, .inProgress table td.title {
+    table-layout: fixed;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.favorited table td.subject, .completed table td.subject, .inProgress table td.subject {
+    width: 100px;
+}
+.favorited table td.number, .completed table td.number, .inProgress table td.number {
+    width: 100px;
+}
+.favorited table td.title, .completed table td.title, .inProgress table td.title {
+    width: 600px;
+}
+
+.favorited .fa {
+    font-size: 18px;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+.completed .fa {
+    font-size: 18px;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+.inProgress .fa {
+    font-size: 18px;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+
+/****************** DETAILS PAGE ****************/
+.details {
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.details label {
+    font-size: 14px;
+}
+.details h2 {
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+.details .info-top {
+    margin-top: 30px;
+}
+.details .detail-label {
+    font-weight: 700;
+}
+.details .detail-info {
+    margin-bottom: 10px;
+}
+.details .action-buttons {
+    display: inline-block;
+}
+.details .action-buttons button {
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.details .action-buttons button .fa {
+    font-size: 16px;
+    margin-right: 7px;
+    margin-left: 0;
+}
+.details .action-buttons button .fa.margin-zero {
+    margin: 0;
+}
+.details a.userLikes-link {
+    font-weight: 700;
+}
+.details a.userLikes-link .fa {
+    margin-right: 10px;
+}
+.details ul.userLikes {
+    /*display: none;*/
+    padding-left: 50px;
+}
+.details .modal-content, .courses .modal-content {
+    font-weight: 500;
+}
+.details .modal-title {
+    font-weight: 700;
+}
+@media screen and (max-width: 990px) {
+    .details h2 {
+        margin-bottom: 10px;
+    }
+    .details .action-buttons button {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .details .action-buttons button span.button-span {
+        display: none;
+    }
+    .details .action-buttons button .fa {
+        margin-right: 0;
+    }
+}
+#deleteCourse {
+    text-align: center;
+}
+#deleteCourse .modal-header, #deleteCourse .modal-footer {
+    border: none;
+}
+#deleteCourse .modal-footer {
+    padding: 10px;
+}
+#deleteCourse .btn {
+    margin: 0 20px;
+}
+@media screen and (min-width: 768px) {
+    #deleteCourse .modal-dialog {
+        width: 550px;
+        margin: 150px auto;
+    }
+}
+
+/****************** FAVORITED PAGE ****************/
+
+.favorited table td.subject, .courses table td.number, .courses table td.title {
+    table-layout: fixed;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.favorited table td.subject {
+    width: 100px;
+}
+.favorited table td.number {
+    width: 100px;
+}
+.favorited table td.title {
+    width: 600px;
+}

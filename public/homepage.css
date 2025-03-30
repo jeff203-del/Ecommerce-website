@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic);
+
+html, body {
+    font-size: 100%;
+    font-family: "Lato", sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*box-sizing: border-box;*/
+    margin: 10px;
+    padding: 0;
+}
+a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+a:hover {
+    /*color: #bbaad2;*/
+}
+
+/* Animation */
+
+@-webkit-keyframes scale {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
+    }
+}
+@keyframes scale {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
+    }
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+body {
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    background-color: rgba(33, 33, 33, 0.9);
+    line-height: 1.5;
+}
+.bg-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: url("https://images.unsplash.com/photo-1454165205744-3b78555e5572?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ca8c08d17555247f7580691500bb5351") no-repeat center center;
+    background-size: cover;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    z-index: -999;
+    -webkit-animation: scale reverse 1s linear;
+    animation: scale reverse 1s linear;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: -webkit-animation .5s ease;
+    transition: -webkit-animation .5s ease;
+    transition: animation .5s ease;
+    transition: animation .5s ease, -webkit-animation .5s ease;
+}
+.bg-hero:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #0B070F;
+    opacity: 0.7;
+    z-index: -888;
+}
+.fade-in {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1.25s;
+    animation: fadeIn ease-in 1.25s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Hero Module styles */
+
+.fade-in.hero-content-heading {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.fade-in.headshot {
+    -webkit-animation-delay: 1.25s;
+    animation-delay: 1.25s;
+}
+.fade-in.hero-content-blurb {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+.fade-in.social-icons {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.hero {
+    width: 100%;
+    max-width: 600px;
+    margin: 70px auto 0;
+    display: block;
+    height: auto;
+    color: white;
+    text-align: center;
+}
+.hero-content {
+    margin-top: 70px;
+}
+@media screen and (max-width: 480px) {
+    .hero {
+        margin: 0 auto;
+    }
+    .hero-content {
+        margin-top: 30px;
+    }
+}
+.hero-content-heading {
+    font-weight: 300;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    letter-spacing: 2px;
+}
+
+img.headshot {
+    width: 170px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.hero-content-blurb {
+    font-size: 18px;
+    margin: 35px auto 0;
+}
+
+/* Icons */
+
+.social-icons {
+    margin: 1.5rem auto;
+    display: block;
+}
+.social-icons li {
+    display: inline-block;
+    margin: 1em 0;
+    width: 70px;
+}
+@media screen and (max-width: 400px) {
+    .social-icons li {
+        width: 60px;
+    }
+}
+.social-icons a {
+    display: block;
+    padding: 5px;
+}
+.social-icons span.span-link {
+    opacity: 0;
+    /*display: none;*/
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 7px;
+}
+.icon-link:hover + .span-link {
+    /*display: block;*/
+    opacity: 1;
+    -webkit-transition: ease 0.7s;
+    transition: ease 0.7s;
+}
+.social-icons .fa {
+    font-size: 30px;
+}

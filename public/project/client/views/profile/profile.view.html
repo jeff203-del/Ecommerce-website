@@ -1,0 +1,91 @@
+<div ng-controller="ProfileController" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-6 col-md-offset-2 main">
+            <h1>Profile</h1>
+            <!-- {{currentUser}} -->
+
+            <div ng-show="message" class="alert alert-success" role="alert">{{message}}</div>
+            <div ng-show="error" class="alert alert-danger" role="alert">{{error}}</div>
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Username:</label>
+                    <div class="col-sm-9">
+                        <input ng-model="currentUser.username" type="text" class="form-control" id="" placeholder="Username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Password:</label>
+                    <div class="col-sm-9">
+                        <input ng-model="currentUser.password" type="password" class="form-control" id="" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">First Name:</label>
+                    <div class="col-sm-9">
+                        <input ng-model="currentUser.firstName" type="text" class="form-control" id="" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Last Name:</label>
+                    <div class="col-sm-9">
+                        <input ng-model="currentUser.lastName" type="text" class="form-control" id="" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3">Email:</label>
+                    <div class="col-sm-9">
+                        <input ng-model="currentUser.email" type="email" class="form-control" id="" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3">NU ID:</label>
+                    <div class="col-sm-9">
+                        <input ng-model="currentUser.nuid" type="text" class="form-control" id="" placeholder="000000000">
+                    </div>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Role:</label>
+                    <div class="col-sm-9">
+                        <input ng-model="currentUser.roles" type="text" class="form-control" id="" placeholder="Role">
+                    </div>
+                </div> -->
+                <div class="form-group">
+                    <div class="col-sm-6 pull-right">
+                        <button data-toggle="modal" data-target="#deleteUser" type="submit" class="btn btn-danger btn-md">Delete My Account</button>
+                    </div>
+                    <div class="col-sm-3 pull-right">
+                        <button ng-click="model.update(currentUser)" type="submit" class="btn btn-success btn-md">Update Profile</button>
+                    </div>
+                    <!-- <div class="col-sm-3 pull-right">
+                        <button ng-click="update(user)" type="submit" class="btn btn-success btn-md">Update Profile</button>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- DELETE USER MODAL -->
+    <div class="modal fade" id="deleteUser" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3>Are you sure you want to delete this course?</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- <h3>Are you sure you want to delete this course?</h3> -->
+                    <button ng-click="model.remove(currentUser)" type="button" class="btn btn-success" data-dismiss="modal">Yes, delete it!</button>
+
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">No, go back!</button>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div ng-include="'views/header/help-modal.html'"></div>
+</div>
